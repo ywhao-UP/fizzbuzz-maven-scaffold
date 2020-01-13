@@ -1,20 +1,27 @@
 public class FizzBuzz {
-    private int num;
 
+    private int num;
     public FizzBuzz(int input) {
         this.num = input;
     }
 
     public String print() {
-
-        if(divided(3)&&divided(5)) return "fizzbuzz";
-        if(divided(3)) return "fizz";
-        if(divided(5)) return "buzz";
-        return String.valueOf(num);
+        String result = "";
+        if (divided(3)) {
+            result += "fizz";
+        }
+        if (divided(5)) {
+            result += "buzz";
+        }
+        if (result.isEmpty()) {
+            result += String.valueOf(num);
+        }
+        return result;
     }
-
-    private boolean divided(int i){
-        if(num%i==0) return true;
+    private boolean divided(int i) {
+        if (num % i == 0) {
+            return true;
+        }
         return false;
     }
 }
