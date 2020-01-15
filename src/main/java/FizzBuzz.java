@@ -1,27 +1,17 @@
 public class FizzBuzz {
 
-    private int num;
-    public FizzBuzz(int input) {
-        this.num = input;
-    }
 
-    public String print() {
-        String result = "";
-        if (divided(3)) {
-            result += "fizz";
+    public String print(int in) {
+        String res = "";
+        if (in % 3 == 0) {
+            res += "fizz";
         }
-        if (divided(5)) {
-            result += "buzz";
+        if (in % 5 == 0) {
+            res += "buzz";
         }
-        if (result.isEmpty()) {
-            result += String.valueOf(num);
+        if (res.isEmpty()) {
+            res += in;
         }
-        return result;
-    }
-    private boolean divided(int i) {
-        if (num % i == 0) {
-            return true;
-        }
-        return false;
+        return res;
     }
 }
