@@ -1,6 +1,5 @@
 public class FizzBuzz {
 
-
     public String print(int in) {
         String res = "";
         if (in % 3 == 0) {
